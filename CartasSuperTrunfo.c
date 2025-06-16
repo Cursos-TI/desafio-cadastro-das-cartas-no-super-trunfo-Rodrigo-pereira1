@@ -23,6 +23,9 @@ int main() {
 
     int densidade, densidade2;
     int cal_pib, cal_pib2;
+    
+    float Super_poder1;
+    float Super_poder2;
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -75,6 +78,10 @@ int main() {
 
     densidade2 =(float)(populacao2 / area2);
     cal_pib2 =(float)(pib2 / populacao2);
+    
+    Super_poder1 = (float)(populacao + area + pib + turismo + cal_pib + (1/densidade));
+    Super_poder2 = (float)(populacao2 + area2 + pib2 + turismo2 + cal_pib2 + (1/densidade2));
+    
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -104,7 +111,19 @@ int main() {
     printf("NÚMERO DE PONTOS TURÍSTICOS: %d\n", turismo2);
     printf("DENSIDADE POPULACIONAL: %f hab/km² \n", densidade2);
     printf("PIB per Capita: %.2f reais \n", cal_pib2);
+    printf("\n");
 
+    //****comparacao de cartas****
+
+    printf("Comparação de cartas \n");
+    printf("População: Carta 1 venceu %d\n", populacao > populacao2);
+    printf("Área; Carta 1 venceu %d\n", area > area2);
+    printf("PIB: Carta 1 venceu %d\n", pib > pib2);
+    printf("Pontos Turisticos: Carta 1 venceu %d\n", turismo > turismo2);
+    printf("Densidade Populacional: Carta 2 venceu %d\n", (densidade < densidade2);
+    printf("PIB per capita: Carta 1 venceu %d\n", cal_pib >cal_pib2);
+    printf("Super Poder: Carta 1 venceu %d\n", Super_poder1 > Super_poder2);
 
     return 0;
-}
+
+} 
